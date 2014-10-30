@@ -38,11 +38,11 @@ public class MainActivity extends FragmentActivity{
         setContentView(R.layout.activity_main);
         mDrawer_layout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mMenu_layout = (LinearLayout) findViewById(R.id.menu_layout);
-        ListView menu_listview = (ListView) mMenu_layout.findViewById(R.id.menu_listView);
-        ArrayList<HashMap<String, String>> tempMapList = DataBuiltUtils.getMainMapList();
-        menu_listview.setAdapter(new MenuListViewAdapter( getApplicationContext(), tempMapList));
-        //菜单ListView设置监听事件
-        menu_listview.setOnItemClickListener(new DrawerItemClickListener());
+//        ListView menu_listview = (ListView) mMenu_layout.findViewById(R.id.menu_listView);
+//        ArrayList<HashMap<String, String>> tempMapList = DataBuiltUtils.getMainMapList();
+//        menu_listview.setAdapter(new MenuListViewAdapter( getApplicationContext(), tempMapList));
+//
+//        menu_listview.setOnItemClickListener(new DrawerItemClickListener());
     }
 
     public class DrawerItemClickListener implements OnItemClickListener {
