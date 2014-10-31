@@ -3,23 +3,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
+
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white" >
-        <FrameLayout
-            android:id="@+id/fragment_layout"
+        android:background="@android:color/white">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/white" >
-            <TextView
+            android:orientation="vertical"
+            android:background="@android:color/white">
+
+            <FrameLayout
+                android:id="@+id/fragment_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="8">
+
+            </FrameLayout>
+            <LinearLayout
+                android:background="@android:color/darker_gray"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
                 android:gravity="center"
-                android:text="主内容界面" />
-        </FrameLayout>
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_tab1"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="9块9"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/tv_tab2"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="19块9"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/tv_tab3"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="29块9"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/tv_tab4"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="品牌团"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
         <!--
         android:layout_gravity="start" 侧滑菜单在左边
         android:layout_gravity="start" 侧滑菜单在右边
@@ -30,45 +73,42 @@
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:background="@android:color/white"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="41dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/edit_content_input"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="40dp"
-                    android:hint="商品搜索"
                     android:background="@color/empty"
-                    />
+                    android:hint="商品搜索" />
 
                 <Button
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:background="@drawable/ic_compose_search"
-                    />
+                    android:background="@drawable/ic_compose_search" />
 
-                </RelativeLayout>
+            </RelativeLayout>
 
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="5dp"
-                android:background="#2ea3fe"/>
+                android:background="#2ea3fe" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:gravity="center"
-                >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -80,14 +120,13 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_launcher"
-                        />
+                        android:src="@drawable/ic_launcher" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="服饰"
-                        />
+                        android:text="服饰" />
 
                 </LinearLayout>
 
@@ -101,14 +140,13 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_launcher"
-                        />
+                        android:src="@drawable/ic_launcher" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="时尚"
-                        />
+                        android:text="时尚" />
 
                 </LinearLayout>
 
@@ -123,35 +161,13 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_launcher"
-                        />
+                        android:src="@drawable/ic_launcher" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="鞋包"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="居家"
-                    />
+                        android:text="鞋包" />
 
                 </LinearLayout>
 
@@ -165,14 +181,33 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_launcher"
-                        />
+                        android:src="@drawable/ic_launcher" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="其他"
-                        />
+                        android:text="居家" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_launcher" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="其他" />
 
                 </LinearLayout>
 
@@ -185,14 +220,11 @@
             解决Android ListView 滚动 Item 背景变黑的问题
             -->
             <!--<ListView-->
-                <!--android:id="@+id/menu_listView"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:cacheColorHint="#FFFFFF" >-->
+            <!--android:id="@+id/menu_listView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:cacheColorHint="#FFFFFF" >-->
             <!--</ListView>-->
-
-
-
 
 
         </LinearLayout>
