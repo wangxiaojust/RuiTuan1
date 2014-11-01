@@ -21,6 +21,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * 抽屉效果
@@ -43,6 +44,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ft = getSupportFragmentManager().beginTransaction();
+        ft.add(R.id.fragment_layout,new TabOneFragment());
+        ft.commit();
         initView();
 //        ListView menu_listview = (ListView) mMenu_layout.findViewById(R.id.menu_listView);
 //        ArrayList<HashMap<String, String>> tempMapList = DataBuiltUtils.getMainMapList();
@@ -86,8 +89,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     }
 
     private void replaceFragment(Fragment newFragment) {
+        Toast.makeText(this,"点击了",Toast.LENGTH_SHORT).show();
         if(!newFragment.isAdded()){
             try{
+                Toast.makeText(this,"点击了.....",Toast.LENGTH_SHORT).show();
                 ft.replace(R.id.fragment_layout, newFragment);
                 ft.addToBackStack(null);
                 ft.commit();
