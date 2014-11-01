@@ -1,6 +1,7 @@
 package com.example.xiaoxiao.ruituan;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,6 +9,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class TabTwoFragment extends Fragment {
@@ -22,6 +25,7 @@ public class TabTwoFragment extends Fragment {
 
     private View view;
 
+    private LinearLayout clickOne;
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -50,6 +54,8 @@ public class TabTwoFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     @Override
@@ -62,11 +68,25 @@ public class TabTwoFragment extends Fragment {
         TextView text2 = (TextView) view.findViewById(R.id.oldprice2);
         TextView text3 = (TextView) view.findViewById(R.id.oldprice3);
         TextView text4 = (TextView) view.findViewById(R.id.oldprice4);
+        clickOne = (LinearLayout) view.findViewById(R.id.clickOne);
+
+
+        clickOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("http://detail.m.tmall.com/item.htm?spm=a220m.6910245.0.0&id=37944438337");
+                Intent it = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(it);
+            }
+        });
+
+
 
         text1.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG );
         text2.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG );
         text3.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG );
         text4.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG );
+
         return view;
 
 
