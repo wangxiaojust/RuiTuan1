@@ -1,12 +1,14 @@
 package com.example.xiaoxiao.ruituan;
 
 import android.app.Activity;
+import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class TabTwoFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -17,6 +19,8 @@ public class TabTwoFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private View view;
 
     /**
      * Use this factory method to create a new instance of
@@ -52,7 +56,22 @@ public class TabTwoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab_two, container, false);
+
+        view = inflater.inflate(R.layout.fragment_tab_two, container, false);
+        TextView text1 = (TextView) view.findViewById(R.id.oldprice1);
+        TextView text2 = (TextView) view.findViewById(R.id.oldprice2);
+        TextView text3 = (TextView) view.findViewById(R.id.oldprice3);
+        TextView text4 = (TextView) view.findViewById(R.id.oldprice4);
+
+        text1.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG );
+        text2.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG );
+        text3.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG );
+        text4.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG );
+        return view;
+
+
+
+
     }
 
     @Override
