@@ -1,13 +1,65 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.xiaoxiao.ruituan.TabOneFragment">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_full"
+    android:orientation="vertical"
+    android:background="#EDEDED"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/fragment_ly_two_text" />
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
 
-</FrameLayout>
+        <LinearLayout
+            style="@style/layout_horizontal"
+            android:background="#FFFFFF"
+            android:layout_margin="2dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/jiu03"
+                />
+
+
+
+        </LinearLayout>
+
+        <!--<View-->
+            <!--style="@style/layout_horizontal"-->
+            <!--android:background="#000000"-->
+            <!--android:layout_margin="2dp"-->
+            <!--android:layout_weight="1"/>-->
+
+
+
+
+
+        <View
+            style="@style/layout_horizontal"
+            android:background="#ffffff"
+            android:layout_margin="2dp"
+            android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <View
+            style="@style/layout_horizontal"
+            android:background="#ffffff"
+            android:layout_margin="2dp"
+            android:layout_weight="1"/>
+
+        <View
+            style="@style/layout_horizontal"
+            android:background="#aa0000"
+            android:layout_margin="2dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+</LinearLayout>
