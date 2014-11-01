@@ -21,7 +21,6 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * 抽屉效果
@@ -44,8 +43,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ft = getSupportFragmentManager().beginTransaction();
-        ft.add(R.id.fragment_layout,new TabOneFragment());
-        ft.commit();
         initView();
 //        ListView menu_listview = (ListView) mMenu_layout.findViewById(R.id.menu_listView);
 //        ArrayList<HashMap<String, String>> tempMapList = DataBuiltUtils.getMainMapList();
@@ -55,6 +52,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private void initView(){
         mDrawer_layout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mMenu_layout = (LinearLayout) findViewById(R.id.menu_layout);
+        ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.fragment_layout, TabOneFragment.newInstance(null,null));
+        ft.addToBackStack(null);
+        ft.commit();
         tv_tab1= (TextView) findViewById(R.id.tv_tab1);
         tv_tab1.setOnClickListener(this);
         tv_tab2= (TextView) findViewById(R.id.tv_tab2);
@@ -89,10 +90,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     }
 
     private void replaceFragment(Fragment newFragment) {
-        Toast.makeText(this,"点击了",Toast.LENGTH_SHORT).show();
         if(!newFragment.isAdded()){
             try{
-                Toast.makeText(this,"点击了.....",Toast.LENGTH_SHORT).show();
+                ft = getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_layout, newFragment);
                 ft.addToBackStack(null);
                 ft.commit();
@@ -107,6 +107,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Fragment fragment = null;
+        ft = getSupportFragmentManager().beginTransaction();
         //根据item点击行号判断启用指定Fragment
         switch (position){
             case 0:
