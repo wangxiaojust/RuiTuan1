@@ -44,10 +44,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         setContentView(R.layout.activity_main);
         ft = getSupportFragmentManager().beginTransaction();
         initView();
-//        ListView menu_listview = (ListView) mMenu_layout.findViewById(R.id.menu_listView);
-//        ArrayList<HashMap<String, String>> tempMapList = DataBuiltUtils.getMainMapList();
-//        menu_listview.setAdapter(new MenuListViewAdapter( getApplicationContext(), tempMapList));
-//        menu_listview.setOnItemClickListener(new DrawerItemClickListener());
+
     }
     private void initView(){
         mDrawer_layout = (DrawerLayout) findViewById(R.id.drawer_layout);
