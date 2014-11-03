@@ -1,13 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
+    packagingOptions {
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+    }
+    compileSdkVersion 15
     buildToolsVersion '20.0.0'
 
     defaultConfig {
         applicationId 'com.example.xiaoxiao.ruituan'
         minSdkVersion 8
-        targetSdkVersion 19
+        targetSdkVersion 15
         versionCode 1
         versionName '1.0'
     }
@@ -17,6 +21,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+    }
 }
 
 dependencies {
@@ -25,7 +31,5 @@ dependencies {
     compile 'org.springframework.android:spring-android-rest-template:2.0.0.BUILD-SNAPSHOT'
 }
 repositories {
-    maven {
-        url 'http://repo.spring.io/snapshot'
-    }
+    maven { url 'http://repo.spring.io/snapshot' }
 }
