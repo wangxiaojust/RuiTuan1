@@ -4,7 +4,6 @@
     <string name="app_name">RuiTuan</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
     <string name="tab_text1">9块9</string>
     <string name="tab_text2">19块9</string>
     <string name="tab_text3">29块9</string>
@@ -19,5 +18,7 @@
     <string name="car">永久山地车自行车21速</string>
     <string name="mou">魅族 MX3手机钢化膜 MX3</string>
     <string name="ptgs">新疆特产 野生黑加仑葡萄干</string>
-
+    <string name="title_activity_show">ShowActivity</string>
+    <string name="miaoshu">仅售178元，口味浓郁，香气独特，色泽迷人。余味悠长迷人！甜蜜香浓浆果味，一口，你就会爱上TA！</string>
+    <string name="caims">仅售888元，禧玛诺变速山地自行车1辆！加厚壁管抗冲击，全齿平纹轮胎，变速精准，操作感卓越！</string>
 </resources>
