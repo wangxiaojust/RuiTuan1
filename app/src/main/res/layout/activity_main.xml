@@ -44,7 +44,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/tab_selector"
                     android:gravity="center"
-                    android:textSize="18sp"
+                    android:textSize="12sp"
                     android:drawableTop="@drawable/ic_launcher"
                     android:text="9块9"
                     android:layout_weight="1"/>
@@ -54,7 +54,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/tab_selector"
                     android:gravity="center"
-                    android:textSize="18sp"
+                    android:textSize="12sp"
                     android:drawableTop="@drawable/ic_launcher"
                     android:text="19块9"
                     android:layout_weight="1"/>
@@ -64,7 +64,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/tab_selector"
                     android:gravity="center"
-                    android:textSize="18sp"
+                    android:textSize="12sp"
                     android:text="29块9"
                     android:drawableTop="@drawable/ic_launcher"
                     android:layout_weight="1"/>
@@ -74,7 +74,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/tab_selector"
                     android:gravity="center"
-                    android:textSize="18sp"
+                    android:textSize="12sp"
                     android:drawableTop="@drawable/ic_launcher"
                     android:text="品牌团"
                     android:layout_weight="1"/>

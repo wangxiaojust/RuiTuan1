@@ -1,60 +1,56 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/layout_full"
-    android:orientation="vertical"
-
-    >
+    android:orientation="vertical" >
 
     <LinearLayout
         style="@style/layout_vertical"
         android:layout_weight="1"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
         <LinearLayout
-            style="@style/layout_horizontal"
             android:id="@+id/clickOne"
+            style="@style/layout_horizontal"
             android:layout_margin="2dp"
-            android:orientation="vertical"
+            android:layout_weight="1"
             android:background="#EDEDED"
-            android:layout_weight="1">
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/jiu03"
-                />
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/jiu03" />
+
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textSize="13dp"
-                android:layout_marginTop="5dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
                 android:text="@string/shangp"
-                />
+                android:textSize="13dp" />
+
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                >
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:id="@+id/nowprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="14dp"
-                    android:textColor="#FF0000"
-                    android:textStyle="bold"
                     android:text="¥ 124"
-                    />
+                    android:textColor="#FF0000"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/oldprice1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12dp"
                     android:layout_toRightOf="@id/nowprice"
                     android:text="   原价：218"
-                    />
+                    android:textSize="12dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -66,56 +62,54 @@
 
                     />
 
-                </RelativeLayout>
-
+            </RelativeLayout>
 
 
         </LinearLayout>
 
         <LinearLayout
             style="@style/layout_horizontal"
-            android:background="#EDEDED"
             android:layout_margin="2dp"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="#EDEDED"
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/car"
-                />
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/car" />
+
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textSize="13dp"
-                android:layout_marginTop="5dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
                 android:text="@string/car"
-                />
+                android:textSize="13dp" />
+
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                >
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:id="@+id/nowprice2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="14dp"
-                    android:textColor="#FF0000"
-                    android:textStyle="bold"
                     android:text="¥ 800"
-                    />
+                    android:textColor="#FF0000"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/oldprice2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12dp"
                     android:layout_toRightOf="@id/nowprice2"
                     android:text="   原价：1000"
-                    />
+                    android:textSize="12dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -130,59 +124,58 @@
             </RelativeLayout>
 
 
-
         </LinearLayout>
 
-        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         style="@style/layout_vertical"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <LinearLayout
             style="@style/layout_horizontal"
-            android:background="#EDEDED"
             android:layout_margin="2dp"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="#EDEDED"
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/tel"
-                />
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/tel" />
+
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textSize="13dp"
-                android:layout_marginTop="5dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
                 android:text="@string/mou"
-                />
+                android:textSize="13dp" />
+
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                >
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:id="@+id/nowprice3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="14dp"
-                    android:textColor="#FF0000"
-                    android:textStyle="bold"
                     android:text="¥ 5.5"
-                    />
+                    android:textColor="#FF0000"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/oldprice3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12dp"
                     android:layout_toRightOf="@id/nowprice3"
                     android:text="   原价：10"
-                    />
+                    android:textSize="12dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -197,53 +190,51 @@
             </RelativeLayout>
 
 
-
         </LinearLayout>
 
         <LinearLayout
             style="@style/layout_horizontal"
-            android:background="#EDEDED"
             android:layout_margin="2dp"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="#EDEDED"
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/pt"
-                />
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/pt" />
+
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textSize="13dp"
-                android:layout_marginTop="5dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
                 android:text="@string/ptgs"
-                />
+                android:textSize="13dp" />
+
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                >
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:id="@+id/nowprice4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="14dp"
-                    android:textColor="#FF0000"
-                    android:textStyle="bold"
                     android:text="¥ 15"
-                    />
+                    android:textColor="#FF0000"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/oldprice4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12dp"
                     android:layout_toRightOf="@id/nowprice4"
                     android:text="   原价：45"
-                    />
+                    android:textSize="12dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -256,7 +247,6 @@
                     />
 
             </RelativeLayout>
-
 
 
         </LinearLayout>
